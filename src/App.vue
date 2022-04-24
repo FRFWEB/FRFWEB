@@ -135,7 +135,7 @@
            <div class="m-2">
                <h3 class="text-center text-3xl text-font-exo">Technologies</h3>
            </div>
-           <div class="grid grid-rows grid-flow-col gap-4 md:grid-rows-2 md:grid-cols-10 technologies-fix">
+           <div class="grid lg:grid-rows-1 lg:grid-flow-col justify-center gap-4 md:grid-rows-2 md:grid-cols-10 technologies-fix">
               <TechnologiesImages :imageUrl="require('@/assets/img/html5.png')" altName="frf html5"/>
               <TechnologiesImages :imageUrl="require('@/assets/img/css3.png')" altName="frf css3"/>
               <TechnologiesImages :imageUrl="require('@/assets/img/javascript.png')" altName="frf javascript" />
@@ -519,9 +519,9 @@ div.overflow-y-scroll::-webkit-scrollbar, div.overflow-y-scroll::-webkit-scrollb
     flex-direction: row;
     margin-top: 15px;
   }
-    .grid-rows-fixed{
-      grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
-    }
+  .grid-rows-fixed{
+    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+  }
     h1{
     font-size: 20px !important;
     }
@@ -534,6 +534,14 @@ div.overflow-y-scroll::-webkit-scrollbar, div.overflow-y-scroll::-webkit-scrollb
   }
   #content_about .grid-rows{
     height: 45em;
+  }
+  .technologies-fix{
+    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: none !important;
+    justify-content: center;
+  }
+  .grid-rows-fixed{
+    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
   }
 }
 @media only screen and (max-width: 1200px) and (min-width: 1025px){}
