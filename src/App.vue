@@ -446,7 +446,7 @@ div.overflow-y-scroll::-webkit-scrollbar, div.overflow-y-scroll::-webkit-scrollb
   }
   .menu-mobile > .w-40 > .h-screen > .flex > .mt-6{
     margin-left: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .menu-mobile > .w-40 > .h-screen{
     height: 80px;
@@ -457,7 +457,7 @@ div.overflow-y-scroll::-webkit-scrollbar, div.overflow-y-scroll::-webkit-scrollb
   }
   .menu-mobile > .w-40 > .h-screen > .flex > .flex{
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 15px;
     justify-content: end;
   }
   .grid-rows-fixed{
