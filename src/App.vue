@@ -121,6 +121,8 @@
                     <ExperiencesComponent nameExperience="SOTFWARE ENGINEER" />
                     <ExperiencesComponent nameExperience="TECHNICAL SUPPORT" />
                     <ExperiencesComponent nameExperience="WEB CONSULTANT" />
+                    <ExperiencesComponent nameExperience="FULL STACK WEB DEVEOLPER" />
+                    <ExperiencesComponent nameExperience="LEAD DEVEOLPER" />
                 </div>
               </div>
            </div>
