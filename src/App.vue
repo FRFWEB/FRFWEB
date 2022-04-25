@@ -162,7 +162,7 @@
            <div class="mt-2">
              <p class="text-center text-lg text-font-exo">Projects</p>
            </div>
-           <div class="mt-2">
+           <div class="mt-2"> 
              <div class="grid grid-rows-6 grid-cols-3 grid-flow-col gap-4 grid-rows-fixed sm:grid-cols-2">
                <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/dateadventista.jpg')"
