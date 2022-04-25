@@ -91,7 +91,7 @@
                </div>
               </div>
               <div class="mt-5 item-hide hidden" id="content_about">
-                <div class="grid grid-rows grid-cols-2 gap-4 sm:grid-rows-2 sm:grid-cols-1">
+                <div class="lg:grid lg:grid-rows-1 lg:grid-cols-2 gap-4 sm:grid-rows-2 sm:grid-cols-1">
                   <div>
                     <p class="text-justify text-base">Buenas, soy especializado en el Desarrollo web con más de 3 años de experiencia bajo contrato de empresas y freelancer, las tecnologías que actualmente manejo son html, css, sass, bootstrap, tailwindcss, javascript, jquery, php, nodejs vuejs, express.js, webpack, sql entre otros... Así mismo evaluó las tecnologías correspondientes a usar de acuerdo a los requerimientos solicitados, también totalmente abierto al aprendizaje continuo de nuevas tecnologías, siempre motivado en obtener los mejores resultados al igual ser productivo para el equipo, realizo monitoreo y optimización constante del código ya realizado.</p>
                     <p class="mt-2 text-justify text-base">Mi experiencia consiste la construcción de sitio web ya previamente diseñados o no diseñados utilizando las tecnologías previamente discutidas cumpliendo requisitos tales como responsive desing, comprensión de código, SEO, evaluación de velocidad con LightSpeed o LightHouse, uso de Api’s para mostrar información determinada, conexiones de base datos, CRUD, compresión de imágenes, montar servidor local con nodejs, xampp o wampserver, reparación u optimización de código en producción entre otros... Por otro lado, en cuanto a servidores ha sido renovación de certificado ssl, configuración de apache2 o httpd en servidores CentOs o Ubuntu, configuración de httpd.conf agregando puertos virtuales y generar código bash para navegación más rápida en el terminal Por último, manejo herramientas como photoshop, figma, movavi, postman, putty, winscp y código bash</p>
@@ -166,109 +166,145 @@
                 :imageUrl="require('@/assets/capture/dateadventista.jpg')"
                 nameProject="Date Adventista"
                 description="Website sites online"
-                technologies="HTML, CSS, PHP, JAVASCRIPT, BOOTSTRAP"  />
+                technologies="HTML, CSS, PHP, JAVASCRIPT, BOOTSTRAP"  
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/dateadventista.zip"
+                downloadFile="true"/>
                 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/eurotopes.jpg')"
                 nameProject="Eurotopes Marmoles y Granitos"
                 description="Website of marmoles and granito"
-                technologies="HTML, CSS, PHP, BOOTSTRAP"  />
+                technologies="HTML, CSS, PHP, BOOTSTRAP"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/euro.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/uservices.jpg')"
                 nameProject="Uservicies Corporate INC"
                 description="Website of servicies im USA"
-                technologies=" HTML, CSS, PHP, JAVASCRIPT, JQUERY, BOOTSTRAP"  />
+                technologies=" HTML, CSS, PHP, JAVASCRIPT, JQUERY, BOOTSTRAP"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/uservicies.zip"
+                downloadFile="false"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/veneremesa.jpg')"
                 nameProject="Veneremesa"
                 description="Website of remeses"
-                technologies="HTML, CSS, PHP, BOOTSTRAP"  />
+                technologies="HTML, CSS, PHP, BOOTSTRAP"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/veneremesa.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/zle.lc.png')"
                 nameProject="Zle.lc"
                 description="Website of ZSH"
-                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"  />
+                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/zle.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/eurofactura.jpg')"
                 nameProject="Eurotopes Invoice System"
                 description="Application to make sales"
-                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"  />
+                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/eurotopes.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/americanstrongman.png')"
                 nameProject="American Strong Man"
                 description="Website of GYM and Fitness"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"  />
+                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/americanstrongman.zip"
+                downloadFile="true" />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/wizzle.png')"
                 nameProject="Wizzle CSS"
                 description="Framework of css"
-                technologies="HTML, CSS, JAVASCRIPT, EXPRESS, EJS, NODEJS, CODEJAR"  />
+                technologies="HTML, CSS, JAVASCRIPT, EXPRESS, EJS, NODEJS, CODEJAR"
+                url="https://wizzle.work/"
+                downloadFile="false"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/serviciostelefonica.png')"
                 nameProject="Servicios Telefonica"
                 description="Website of sell mobiles"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"  />
+                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/seriviciostelefonica.zip"
+                downloadFile="true"   />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/cell.com.pl.png')"
                 nameProject="Cell.com.pl"
                 description="Website of sell electronics, mobile and others"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"  />
+                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/cell.zip"
+                downloadFile="true"   />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/hotelsantiagodemacuot.png')"
                 nameProject="hotelsantiagodemacuto"
                 description="Site in under construction"
-                technologies="HTML, CSS, JAVASCRIPT"  />
+                technologies="HTML, CSS, JAVASCRIPT"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/hotelsantiago.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/itd.es.png')"
                 nameProject="Divison of information technology - ITD"
                 description="Divison of information technology website"
-                technologies="HTML, CSS, JAVASCRIPT, NODEJS, GULPJS"  />
+                technologies="HTML, CSS, JAVASCRIPT, NODEJS, GULPJS"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/itd.zip"
+                downloadFile="true"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/politicalintersectionblog.png')"
                 nameProject="politicalintersectionblog"
                 description="Website type blog"
-                technologies="HTML, CSS, JAVASCRIPT" />
+                technologies="HTML, CSS, VUEJS, JAVASCRIPT"
+                url="https://portafoliofrfweb.000webhostapp.com/downloads/political.zip"
+                downloadFile="true" />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/ht.fo.png')"
                 nameProject="ht.fo"
                 description="Website of shortener link"
-                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB" />
+                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
+                url="https://ht.fo/" 
+                downloadFile="false" />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/proyectoshappy.png')"
                 nameProject="Proyectos Happy 3000 C.A"
                 description="Website of servicies"
-                technologies="WORDPRESS" />
+                technologies="WORDPRESS"
+                url="https://proyectoshappy.com/" 
+                downloadFile="false" />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/elcorreord.png')"
                 nameProject="El CorreoRD"
                 description="Website of noticies"
-                technologies="WORDPRESS" />
+                technologies="WORDPRESS"
+                url="https://elcorreord.com/" 
+                downloadFile="false"  />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/dr.fo.png')"
                 nameProject="Dr.fo - Shrink Your Link"
                 description="Website of shortener link"
-                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB" />
+                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
+                url="https://dr.fo/" 
+                downloadFile="false" />
 
                 <TechnologiesProjects 
                 :imageUrl="require('@/assets/capture/indpls.in.png')"
                 nameProject="indpls.in"
                 description="Website of indianapolis"
-                technologies="MAPSERVER, OPENLAYERS, STRAPI, EXPRESS, EJS, WIZZLE.CSS, JAVASCRIPT, WEBSCRAPPING" />
+                technologies="MAPSERVER, OPENLAYERS, STRAPI, EXPRESS, EJS, WIZZLE.CSS, JAVASCRIPT, WEBSCRAPPING"
+                url="https://indpls.in/" 
+                downloadFile="false"  />
               </div>
            </div>
          </div>
@@ -378,7 +414,6 @@ export default {
 </script>
 
 <style>
-
 body {
   background: #1F1F1F;
   color: #fff;
