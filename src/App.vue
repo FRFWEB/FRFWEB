@@ -1,727 +1,633 @@
 <template>
   <div>
-    <div class="grid grid-cols-3 gap-4 links-mobile">
-      <!-- COL-1 -->
-      <div class="">
-        <div class="z-10 relative w-40 links-width-fix">
-          <div class="absolute w-full bg-neutral-800 h-screen links-fix">
-            <div
-              class="flex h-screen w-full justify-center items-center flex-col"
-            >
-              <div class="m-3 networks-links">
-                <a href="https://telegram.me/frfweb" target="_blank">
-                  <i
-                    class="fa fa-telegram hover:text-blue-400"
-                    aria-hidden="true"
-                  ></i>
-                </a>
-              </div>
-              <div class="m-3 networks-links">
-                <a href="https://www.linkedin.com/in/frfweb/" target="_blank">
-                  <i
-                    class="fa fa-linkedin-square hover:text-blue-400"
-                    aria-hidden="true"
-                  ></i>
-                </a>
-              </div>
-              <div class="m-3 networks-links">
-                <a href="https://www.instagram.com/frf.web/" target="_blank">
-                  <i
-                    class="fa fa-instagram hover:text-blue-400"
-                    aria-hidden="true"
-                  ></i>
-                </a>
-              </div>
-              <div class="m-3 networks-links">
-                <a href="https://github.com/teikblade" target="_blank">
-                  <i
-                    class="fa fa-github-square hover:text-blue-400"
-                    aria-hidden="true"
-                  ></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- COL-2 -->
-      <div class="">
-        <div
-          class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
-        >
-          <div class="mb-3 text-title">
-            <h1 class="lg:text-5xl text-font-exo text-center sm:text-xl">
-              I'M FRANCISCO, WELCOME TO MY PORTAFOLIO
-            </h1>
-            <p class="text-center lg:text-2xl text-font-exo mt-2 sm:text-base">
-              PLEASE SELECT CATEGORY
-            </p>
-          </div>
-          <div class="flex item-category">
-            <div class="m-2">
-              <span class="cursor-pointer" v-on:click="open_panel('dev')"
-                ><h2 class="text-lg hover:text-blue-400">
-                  WEB DEVELOPER
-                </h2></span
-              >
-            </div>
-            <div class="m-2">
-              <span class="cursor-pointer" v-on:click="open_panel('editor')"
-                ><h2 class="text-lg hover:text-blue-400">VIDEO EDITOR</h2></span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- COL-3 -->
-      <div class="flex justify-end menu-mobile">
-        <div class="z-10 relative w-40">
-          <div class="absolute w-full bg-neutral-800 h-screen">
-            <div class="flex h-screen w-full items-center flex-col">
-              <div class="mt-6">
-                <span class="cursor-pointer" v-on:click="open_panel('menu')"
-                  ><i class="fa fa-bars" aria-hidden="true"></i
-                ></span>
-              </div>
-              <div
-                class="flex justify-center flex-col items-center w-full h-screen"
-              >
-                <div class="m-3 text-center">
-                  <a
-                    href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaSpanish.pdf"
-                    target="_blank"
-                    ><i class="fa fa-file-pdf-o" aria-hidden="true"></i
-                  ></a>
-                  <p>spanish</p>
+    <header>
+      <div class="grid grid-cols-1 gap-4 links-mobile">
+        <!-- HEADER -->
+        <div class="flex justify-end menu-mobile">
+          <div class="z-10 relative w-full">
+            <div class="fixed top-0 w-full bg-neutral-800 h-auto">
+              <div class="flex h-auto w-full items-center flex-row">
+                <div class="p-4">
+                  <span class="cursor-pointer" v-on:click="open_panel()"
+                    ><i class="fa fa-bars" aria-hidden="true"></i
+                  ></span>
                 </div>
-                <div class="m-3 text-center">
-                  <a
-                    href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaEnglish.pdf"
-                    target="_blank"
-                    ><i class="fa fa-file-pdf-o" aria-hidden="true"></i
-                  ></a>
-                  <p>english</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- MODAL MENU -->
-      <div
-        class="flex absolute w-full h-screen justify-center items-center bg-neutral-800 item-hide"
-        id="modal_menu"
-      >
-        <div
-          class="w-11/12 h-5/6 border-slate-100 border rounded-sm p-10 overflow-y-scroll"
-        >
-          <div class="text-right">
-            <span class="cursor-pointer" v-on:click="open_panel('menu')"
-              ><i class="fa fa-times" aria-hidden="true"></i
-            ></span>
-          </div>
-          <div>
-            <h3 class="text-center text-3xl text-font-exo">MENU</h3>
-          </div>
-          <div class="mt-2">
-            <div class="grid grid-rows grid-cols-3 justify-center gap-4">
-              <div class="text-center">
-                <p
-                  v-on:click="open_item_menu('about')"
-                  class="cursor-pointer border-white border-solid border-2 hover:bg-white hover:text-black"
+                <!-- MENU -->
+                <div
+                  class="menu menu-hide shadow shadow-slate-300 sm:w-4/12"
+                  id="principal_menu"
                 >
-                  About
-                </p>
-              </div>
-              <div class="text-center">
-                <p
-                  v-on:click="open_item_menu('certificates')"
-                  class="cursor-pointer border-white border-solid border-2 hover:bg-white hover:text-black"
-                >
-                  Certificates
-                </p>
-              </div>
-              <div class="text-center">
-                <p
-                  v-on:click="open_item_menu('experience')"
-                  class="cursor-pointer border-white border-solid border-2 hover:bg-white hover:text-black"
-                >
-                  Experience
-                </p>
-              </div>
-            </div>
-            <div class="mt-5 item-hide hidden" id="content_about">
-              <div
-                class="lg:grid lg:grid-rows-1 lg:grid-cols-2 gap-4 sm:grid-rows-2 sm:grid-cols-1"
-              >
-                <div>
-                  <p class="text-justify text-base">
-                    Buenas, soy especializado en el Desarrollo web con más de 3
-                    años de experiencia bajo contrato de empresas y freelancer,
-                    las tecnologías que actualmente manejo son html, css, sass,
-                    bootstrap, tailwindcss, javascript, jquery, php, nodejs
-                    vuejs, express.js, webpack, sql entre otros... Así mismo
-                    evaluó las tecnologías correspondientes a usar de acuerdo a
-                    los requerimientos solicitados, también totalmente abierto
-                    al aprendizaje continuo de nuevas tecnologías, siempre
-                    motivado en obtener los mejores resultados al igual ser
-                    productivo para el equipo, realizo monitoreo y optimización
-                    constante del código ya realizado.
-                  </p>
-                  <p class="mt-2 text-justify text-base">
-                    Mi experiencia consiste la construcción de sitio web ya
-                    previamente diseñados o no diseñados utilizando las
-                    tecnologías previamente discutidas cumpliendo requisitos
-                    tales como responsive desing, comprensión de código, SEO,
-                    evaluación de velocidad con LightSpeed o LightHouse, uso de
-                    Api’s para mostrar información determinada, conexiones de
-                    base datos, CRUD, compresión de imágenes, montar servidor
-                    local con nodejs, xampp o wampserver, reparación u
-                    optimización de código en producción entre otros... Por otro
-                    lado, en cuanto a servidores ha sido renovación de
-                    certificado ssl, configuración de apache2 o httpd en
-                    servidores CentOs o Ubuntu, configuración de httpd.conf
-                    agregando puertos virtuales y generar código bash para
-                    navegación más rápida en el terminal Por último, manejo
-                    herramientas como photoshop, figma, movavi, postman, putty,
-                    winscp y código bash
-                  </p>
+                  <div class="mt-4">
+                    <a
+                      target="_blank"
+                      href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaSpanish.pdf"
+                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      >CV SPANISH</a
+                    >
+                  </div>
+                  <div class="mt-2">
+                    <a
+                      target="_blank"
+                      href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaEnglish.pdf"
+                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      >CV ENGLISH</a
+                    >
+                  </div>
+                  <div class="mt-2">
+                    <a
+                      href="mailto:francisco_glopez@hotmail.com"
+                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      >Contact Me</a
+                    >
+                  </div>
                 </div>
-                <div>
-                  <img
-                    src="@/assets/img/about.jpg"
-                    alt="about"
-                    class="w-full"
-                  />
+                <div
+                  class="flex justify-center flex-row items-center w-full h-auto"
+                >
+                  <button
+                    type="button"
+                    @click="this.translateContent('es')"
+                    class="mx-2 px-4 py-1 border-2 border-white rounded"
+                  >
+                    Spanish
+                  </button>
+                  <button
+                    type="button"
+                    @click="this.translateContent('en')"
+                    class="mx-2 px-4 py-1 border-2 border-white rounded"
+                  >
+                    English
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="mt-5 item-hide hidden" id="content_certificates">
-              <div class="grid grid-rows-3 grid-cols-3 gap-4">
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate1.jpg')
-                  "
-                  name="certificate1"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate2.jpg')
-                  "
-                  name="certificate2"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate3.jpg')
-                  "
-                  name="certificate3"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate4.jpg')
-                  "
-                  name="certificate4"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate5.jpg')
-                  "
-                  name="certificate5"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate6.jpg')
-                  "
-                  name="certificate6"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate7.jpg')
-                  "
-                  name="certificate7"
-                />
-                <CertificateComponent
-                  :certificateImage="
-                    require('@/assets/capture/certificate8.jpg')
-                  "
-                  name="certificate8"
-                />
-              </div>
-            </div>
-            <div class="mt-5 item-hide hidden" id="content_experience">
-              <div class="grid grid-rows grid-cols-2 gap-4">
-                <ExperiencesComponent nameExperience="FREELANCE DEVELOPER" />
-                <ExperiencesComponent nameExperience="FRONT-END DEVELOPER" />
-                <ExperiencesComponent nameExperience="ANALYST PROGRAMMER" />
-                <ExperiencesComponent nameExperience="SOTFWARE ENGINEER" />
-                <ExperiencesComponent nameExperience="TECHNICAL SUPPORT" />
-                <ExperiencesComponent nameExperience="WEB CONSULTANT" />
-                <ExperiencesComponent
-                  nameExperience="FULL STACK WEB DEVEOLPER"
-                />
-                <ExperiencesComponent nameExperience="LEAD DEVEOLPER" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- MODAL WEB DEVEOLPER -->
-      <div
-        class="flex absolute w-full h-screen justify-center items-center bg-neutral-800 item-hide"
-        id="modal_dev"
-      >
-        <div
-          class="w-11/12 h-5/6 border-slate-100 border rounded-sm p-10 overflow-y-scroll"
-        >
-          <div class="text-right">
-            <span class="cursor-pointer" v-on:click="open_panel('dev')"
-              ><i class="fa fa-times" aria-hidden="true"></i
-            ></span>
-          </div>
-          <div class="m-2">
-            <h3 class="text-center text-3xl text-font-exo">Technologies</h3>
-          </div>
+    </header>
+    <main>
+      <div class="grid grid-cols-1 gap-4">
+        <!-- CONTENT-1 -->
+        <div class="relative default-transition" id="element_transition">
           <div
-            class="grid lg:grid-rows-1 lg:grid-flow-col justify-center gap-4 md:grid-rows-2 md:grid-cols-10 technologies-fix"
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
           >
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/html5.png')"
-              altName="frf html5"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/css3.png')"
-              altName="frf css3"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/javascript.png')"
-              altName="frf javascript"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/sass.png')"
-              altName="frf sass"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/bootstrap.png')"
-              altName="frf botstrap"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/wordpress.png')"
-              altName="frf wordpress"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/node.png')"
-              altName="frf node"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/vuejs.png')"
-              altName="frf vuejs"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/express.png')"
-              altName="frf express"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/php.png')"
-              altName="frf php"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/cpanel.png')"
-              altName="frf cpanel"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/sql.png')"
-              altName="frf sql"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/jquery.png')"
-              altName="frf jquery"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/gulp.png')"
-              altName="frf gulp"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/photoshop.png')"
-              altName="frf gulp"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/figma.png')"
-              altName="frf figma"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/api.png')"
-              altName="frf api"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/tailwind.png')"
-              altName="frf api"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/seo.png')"
-              altName="frf seo"
-            />
-            <TechnologiesImages
-              :imageUrl="require('@/assets/img/mongodb.png')"
-              altName="frf seo"
-            />
+            <div class="mb-3 text-title">
+              <h1
+                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+              >
+                HI I'M FRANCISCO, FULL STACK WEB DEVELOPER
+              </h1>
+              <h2
+                class="text-center mt-4 lg:text-3xl text-font-exo sm:text-base translate"
+              >
+                WELCOME TO MY PORTAFOLIO
+              </h2>
+            </div>
+            <div class="mt-8 text-title text-center w-3/4">
+              <p class="text-font-exo text-xl translate">
+                DO YOU WANT TO KNOW MORE ABOUT ME?, SCROLL AND YOU WILL SEE THE
+                MAGIC
+              </p>
+              <i class="fa fa-arrow-down mt-2" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="mt-2">
-            <p class="text-center text-lg text-font-exo">Projects</p>
+        </div>
+        <!-- CONENT 2 -->
+        <div class="relative change-content" id="element_transition">
+          <div
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
+          >
+            <div class="mb-3 text-title">
+              <h2
+                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+              >
+                ABOUT ME
+              </h2>
+            </div>
+            <div>
+              <p
+                class="text-justify mt-4 lg:text-2xl text-font-exo sm:text-base translate w-3/4 mx-auto"
+              >
+                MY PASSION FOR COMPUTERS STARTED AT 12 YEARS OLD, AT 18 IT WAS
+                THE FIRST TIME I OBSERVED PROGRAMMING IN THIS CASE IT WAS IN C++
+                IN UNIVERSITY WHAT IGNITED MY PASSION, SINCE 2013 I PRACTICE
+                PROGRAMMING LOGIC AND TIME LATER I DECIDED TO SPECIALIZE IN WEB
+                TECHNOLOGIES, THEREFORE I STARTED LEARNING HTML, CSS, JAVASCRIPT
+                AND PHP, CURRENTLY WORKING IN THE AREA SINCE 2016
+              </p>
+            </div>
+            <div class="mt-8 text-title text-center">
+              <p class="text-font-exo text-xl translate">
+                DO YOU WANT TO KNOW WHAT TECHNOLOGIES I CURRENTLY USE?, USE THE
+                SCROLL
+              </p>
+              <i class="fa fa-arrow-down mt-2" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="mt-2">
-            <div
-              class="grid grid-rows-6 grid-cols-3 grid-flow-col gap-4 grid-rows-fixed sm:grid-cols-2"
-            >
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/dateadventista.jpg')"
-                nameProject="Date Adventista"
-                description="Website sites online"
-                technologies="HTML, CSS, PHP, JAVASCRIPT, BOOTSTRAP"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/dateadventista.zip"
-                downloadFile="true"
+        </div>
+        <!-- CONENT 3 -->
+        <div class="relative change-content" id="element_transition">
+          <div
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
+          >
+            <div class="mb-3 text-title">
+              <h2
+                class="lg:text-5xl text-font-exo text-center sm:text-xl translate w-3/4 mx-auto"
+              >
+                THE TECHNOLOGIES, FRAMEWORKS AND CMS I CURRENTLY USE ARE THESE
+              </h2>
+            </div>
+            <div class="flex mt-4">
+              <img
+                src="@/assets/img/html5.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
               />
+              <img
+                src="@/assets/img/css3.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/javascript.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/sass.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/wordpress.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/sql.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+            </div>
+            <div class="flex mt-4">
+              <img
+                src="@/assets/img/electronjs.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/bootstrap.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/tailwind.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/jquery.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/webpack.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/mysql.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+            </div>
+            <div class="flex mt-4">
+              <img
+                src="@/assets/img/node.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/express.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/mongodb.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/php.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/vuejs.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+              <img
+                src="@/assets/img/strapi.png"
+                alt="html5"
+                class="w-20 rounded-lg mx-2 item-tech"
+              />
+            </div>
+            <div class="mt-8 text-title text-center">
+              <p class="text-font-exo text-xl translate">
+                WHAT PROJECTS HAVE YOU DONE?, USE THE SCROLL
+              </p>
+              <i class="fa fa-arrow-down mt-2" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <!-- CONENT 4 -->
+        <div class="relative change-content" id="element_transition">
+          <div
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center my-projets-list"
+          >
+            <div class="mb-3">
+              <div class="flex mt-2 justify-center">
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/proyectoshappy.png')"
+                  nameProject="Proyectos Happy 3000 C.A"
+                  description="Website of servicies"
+                  technologies="WORDPRESS"
+                  url="https://proyectoshappy.com/"
+                  downloadFile="false"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/eurotopes.jpg')"
-                nameProject="Eurotopes Marmoles y Granitos"
-                description="Website of marmoles and granito"
-                technologies="HTML, CSS, PHP, BOOTSTRAP"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/euro.zip"
-                downloadFile="true"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/indpls.in.png')"
+                  nameProject="indpls.in"
+                  description="Website of indianapolis"
+                  technologies="MAPSERVER, OPENLAYERS, STRAPI, EXPRESS, EJS, WIZZLE.CSS, JAVASCRIPT, WEBSCRAPPING"
+                  url="https://indpls.in/"
+                  downloadFile="false"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/uservices.jpg')"
-                nameProject="Uservicies Corporate INC"
-                description="Website of servicies im USA"
-                technologies=" HTML, CSS, PHP, JAVASCRIPT, JQUERY, BOOTSTRAP"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/uservicies.zip"
-                downloadFile="false"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/uservices.jpg')"
+                  nameProject="Uservicies Corporate INC"
+                  description="Website of servicies im USA"
+                  technologies=" HTML, CSS, PHP, JAVASCRIPT, JQUERY, BOOTSTRAP"
+                  url="https://portafoliofrfweb.000webhostapp.com/downloads/uservicies.zip"
+                  downloadFile="true"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/veneremesa.jpg')"
-                nameProject="Veneremesa"
-                description="Website of remeses"
-                technologies="HTML, CSS, PHP, BOOTSTRAP"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/veneremesa.zip"
-                downloadFile="true"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/ht.fo.png')"
+                  nameProject="ht.fo"
+                  description="Website of shortener link"
+                  technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
+                  url="https://ht.fo/"
+                  downloadFile="false"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/zle.lc.png')"
-                nameProject="Zle.lc"
-                description="Website of ZSH"
-                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/zle.zip"
-                downloadFile="true"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/zle.lc.png')"
+                  nameProject="Zle.lc"
+                  description="Website of ZSH"
+                  technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"
+                  url="https://portafoliofrfweb.000webhostapp.com/downloads/zle.zip"
+                  downloadFile="true"
+                />
+              </div>
+              <div class="flex mt-2">
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/dr.fo.png')"
+                  nameProject="Dr.fo - Shrink Your Link"
+                  description="Website of shortener link"
+                  technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
+                  url="https://dr.fo/"
+                  downloadFile="false"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/eurofactura.jpg')"
-                nameProject="Eurotopes Invoice System"
-                description="Application to make sales"
-                technologies="NODEJS, VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE.CSS, WEBPACK"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/eurotopes.zip"
-                downloadFile="true"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/americanstrongman.png')"
+                  nameProject="American Strong Man"
+                  description="Website of GYM and Fitness"
+                  technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                  url="https://portafoliofrfweb.000webhostapp.com/downloads/americanstrongman.zip"
+                  downloadFile="true"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/americanstrongman.png')"
-                nameProject="American Strong Man"
-                description="Website of GYM and Fitness"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/americanstrongman.zip"
-                downloadFile="true"
-              />
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/wizzle.png')"
+                  nameProject="Wizzle CSS"
+                  description="Framework of css"
+                  technologies="HTML, CSS, JAVASCRIPT, EXPRESS, EJS, NODEJS, CODEJAR"
+                  url="https://wizzle.work/"
+                  downloadFile="false"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/wizzle.png')"
-                nameProject="Wizzle CSS"
-                description="Framework of css"
-                technologies="HTML, CSS, JAVASCRIPT, EXPRESS, EJS, NODEJS, CODEJAR"
-                url="https://wizzle.work/"
-                downloadFile="false"
-              />
+                <TechnologiesProjects
+                  :imageUrl="
+                    require('@/assets/capture/serviciostelefonica.png')
+                  "
+                  nameProject="Servicios Telefonica"
+                  description="Website of sell mobiles"
+                  technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                  url="https://serviciostelefonica.com/"
+                  downloadFile="false"
+                  hiddenElement="true"
+                />
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/serviciostelefonica.png')"
-                nameProject="Servicios Telefonica"
-                description="Website of sell mobiles"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/seriviciostelefonica.zip"
-                downloadFile="true"
+                <TechnologiesProjects
+                  :imageUrl="require('@/assets/capture/cell.com.pl.png')"
+                  nameProject="Cell.com.pl"
+                  description="Website of sell electronics, mobile and others"
+                  technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
+                  url="https://portafoliofrfweb.000webhostapp.com/downloads/cell.zip"
+                  downloadFile="false"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <a
+                  target="_blank"
+                  href="https://github.com/teikblade"
+                  type="button"
+                  class="p-2 border-2 border-white rounded translate hover:bg-white hover:text-gray-700"
+                >
+                  CHECK MORE PROJECTS IN MY GITHUB
+                </a>
+              </div>
+            </div>
+            <div class="mt-3 text-title text-center">
+              <p class="text-font-exo text-xl translate">
+                SCROLL AND YOU WILL SEE MY CURRENTLY TAKEN COURSES
+              </p>
+              <i class="fa fa-arrow-down mt-2" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <!-- CONTENT 5 -->
+        <div class="relative change-content" id="element_transition">
+          <div
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center my-certificates-list"
+          >
+            <div class="mb-3 text-title">
+              <h2
+                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+              >
+                MY LAST COURSES
+              </h2>
+            </div>
+            <div class="flex mt-2">
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate1.jpg')"
+                name="certificate1"
               />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate2.jpg')"
+                name="certificate2"
+              />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate3.jpg')"
+                name="certificate3"
+              />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate4.jpg')"
+                name="certificate4"
+              />
+            </div>
+            <div class="flex">
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate5.jpg')"
+                name="certificate5"
+              />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate6.jpg')"
+                name="certificate6"
+              />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate7.jpg')"
+                name="certificate7"
+              />
+              <CertificateComponent
+                :certificateImage="require('@/assets/capture/certificate8.jpg')"
+                name="certificate8"
+              />
+            </div>
+            <div class="text-center mt-4">
+              <a
+                target="_blank"
+                href="https://github.com/teikblade"
+                type="button"
+                class="p-2 border-2 border-white rounded translate hover:bg-white hover:text-gray-700"
+              >
+                DOWNLOAD ALL CERTIFICATES
+              </a>
+            </div>
 
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/cell.com.pl.png')"
-                nameProject="Cell.com.pl"
-                description="Website of sell electronics, mobile and others"
-                technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/cell.zip"
-                downloadFile="true"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="
-                  require('@/assets/capture/hotelsantiagodemacuot.png')
-                "
-                nameProject="hotelsantiagodemacuto"
-                description="Site in under construction"
-                technologies="HTML, CSS, JAVASCRIPT"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/hotelsantiago.zip"
-                downloadFile="true"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/itd.es.png')"
-                nameProject="Divison of information technology - ITD"
-                description="Divison of information technology website"
-                technologies="HTML, CSS, JAVASCRIPT, NODEJS, GULPJS"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/itd.zip"
-                downloadFile="true"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="
-                  require('@/assets/capture/politicalintersectionblog.png')
-                "
-                nameProject="politicalintersectionblog"
-                description="Website type blog"
-                technologies="HTML, CSS, VUEJS, JAVASCRIPT"
-                url="https://portafoliofrfweb.000webhostapp.com/downloads/political.zip"
-                downloadFile="true"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/ht.fo.png')"
-                nameProject="ht.fo"
-                description="Website of shortener link"
-                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
-                url="https://ht.fo/"
-                downloadFile="false"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/proyectoshappy.png')"
-                nameProject="Proyectos Happy 3000 C.A"
-                description="Website of servicies"
-                technologies="WORDPRESS"
-                url="https://proyectoshappy.com/"
-                downloadFile="false"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/elcorreord.png')"
-                nameProject="El CorreoRD"
-                description="Website of noticies"
-                technologies="WORDPRESS"
-                url="https://elcorreord.com/"
-                downloadFile="false"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/dr.fo.png')"
-                nameProject="Dr.fo - Shrink Your Link"
-                description="Website of shortener link"
-                technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
-                url="https://dr.fo/"
-                downloadFile="false"
-              />
-
-              <TechnologiesProjects
-                :imageUrl="require('@/assets/capture/indpls.in.png')"
-                nameProject="indpls.in"
-                description="Website of indianapolis"
-                technologies="MAPSERVER, OPENLAYERS, STRAPI, EXPRESS, EJS, WIZZLE.CSS, JAVASCRIPT, WEBSCRAPPING"
-                url="https://indpls.in/"
-                downloadFile="false"
-              />
+            <div class="mt-5 text-title text-center">
+              <p class="text-font-exo text-xl translate">
+                THIS IS ALL, BUT IF YOU SCROLL YOU WILL HAVE A SURPRISE
+              </p>
+              <i class="fa fa-arrow-down mt-2" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <!-- CONTENT-6 -->
+        <div class="relative change-content" id="element_transition">
+          <div
+            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center joke"
+          >
+            <div class="mb-3">
+              <h2
+                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+              >
+                JOKE
+              </h2>
+            </div>
+            <div class="w-3/4">
+              <p class="text-font-exo text-xl text-center">{{ jokeMessage }}</p>
+            </div>
+            <div class="mt-4">
+              <p class="text-font-exo text-xl translate text-center">
+                HAPPY DAY :)
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <!-- MODAL WEB VIDEO EDITOR-->
-      <div
-        class="flex absolute w-full h-screen justify-center items-center bg-neutral-800 item-hide"
-        id="modal_editor"
-      >
-        <div
-          class="w-11/12 h-5/6 border-slate-100 border rounded-sm p-10 overflow-y-scroll"
-        >
-          <div class="text-right">
-            <span class="cursor-pointer" v-on:click="open_panel('editor')"
-              ><i class="fa fa-times" aria-hidden="true"></i
-            ></span>
-          </div>
-          <div>
-            <h3 class="text-center text-3xl text-font-exo">VIDEO EDITOR</h3>
-          </div>
-          <div class="m-2">
-            <p class="text-center text-lg text-font-exo">Projects</p>
-          </div>
-          <div class="mt-2">
+    </main>
+    <footer>
+      <div class="grid grid-cols-1 gap-4">
+        <!-- FOOTER -->
+        <div class="">
+          <div class="z-10 relative w-full links-width-fix">
             <div
-              class="grid lg:grid-rows-3 lg:grid-cols-4 lg:grid-flow-col gap-4 sm:grid-rows-6 sm:grid-cols-2"
+              class="fixed bottom-0 p-2 w-full bg-neutral-800 h-auto links-fix"
             >
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/LYStG7nBuIg"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/UJcISdvKSmo"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/OwKL7_udpaA"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/tmhZXF5JgQM"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.instagram.com/p/CcWKetugC0f/embed"
-                  title="Instagram video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.instagram.com/p/CYmr97kqZjc/embed"
-                  title="Instagram video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/i-T2Bfi0-f4"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.instagram.com/p/CRy0NstBwYr/embed"
-                  title="Instagram video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/jHIeDG4JS18"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/4X8ssCtqOOc"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/_HZTOUIM_WQ"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.youtube.com/embed/zkdn3mtd1Ik"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""
-                ></iframe>
+              <div
+                class="flex h-auto w-full justify-center items-center flex-row"
+              >
+                <div class="m-3 networks-links">
+                  <a href="https://telegram.me/frfweb" target="_blank">
+                    <i
+                      class="fa fa-telegram hover:text-blue-400"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
+                <div class="m-3 networks-links">
+                  <a href="https://www.linkedin.com/in/frfweb/" target="_blank">
+                    <i
+                      class="fa fa-linkedin-square hover:text-blue-400"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
+                <div class="m-3 networks-links">
+                  <a href="https://www.instagram.com/frf.web/" target="_blank">
+                    <i
+                      class="fa fa-instagram hover:text-blue-400"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
+                <div class="m-3 networks-links">
+                  <a href="https://github.com/teikblade" target="_blank">
+                    <i
+                      class="fa fa-github-square hover:text-blue-400"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import TechnologiesImages from "./components/TechnologiesImages.vue";
+import { english, spanish } from "./traslate";
 import TechnologiesProjects from "./components/TechnologiesProjects.vue";
-import ExperiencesComponent from "./components/ExperiencesComponent.vue";
 import CertificateComponent from "./components/CertificateComponent.vue";
 export default {
   name: "App",
   components: {
-    TechnologiesImages,
     TechnologiesProjects,
-    ExperiencesComponent,
     CertificateComponent,
   },
+  data() {
+    return {
+      jokeMessage: "",
+      languageDefault: "en",
+    };
+  },
   methods: {
-    open_panel(item) {
-      let getModalItem = document.getElementById("modal_" + item);
-      if (getModalItem.classList.contains("item-hide") == true) {
-        getModalItem.classList.add("item-show");
-        getModalItem.classList.remove("item-hide");
-      } else {
-        getModalItem.classList.remove("item-show");
-        getModalItem.classList.add("item-hide");
+    async jokeGenerator() {
+      this.jokeMessage = "";
+      if (this.languageDefault == "es") {
+        let response = await fetch(
+          "https://palabras-aleatorias-public-api.herokuapp.com/joke/random"
+        );
+        let data = await response.json();
+        data.body.lines.forEach((getLines) => {
+          console.log(getLines);
+          this.jokeMessage += getLines + " ";
+        });
+        return;
       }
+      let response = await fetch("https://api.chucknorris.io/jokes/random");
+      let data = await response.json();
+      this.jokeMessage = data.value;
     },
-    open_item_menu(item) {
-      let getContentItem = document.getElementById("content_" + item);
-      if (getContentItem.classList.contains("hidden") == true) {
-        getContentItem.classList.remove("hidden");
-        setTimeout(() => {
-          if (getContentItem.classList.contains("item-hide") == true) {
-            getContentItem.classList.add("item-show");
-            getContentItem.classList.remove("item-hide");
+    translateContent(language) {
+      let getAllElementForTranslate = document.querySelectorAll(".translate");
+      console.log(getAllElementForTranslate);
+      if (language == "es") {
+        this.languageDefault = "es";
+        let objTranslate = spanish();
+        getAllElementForTranslate.forEach((itemText, index) => {
+          itemText.innerHTML = objTranslate[index];
+        });
+        this.jokeGenerator();
+        return;
+      }
+      let objTranslate = english();
+      this.languageDefault = "en";
+      getAllElementForTranslate.forEach((itemText, index) => {
+        itemText.innerHTML = objTranslate[index];
+      });
+      this.jokeGenerator();
+    },
+    open_panel() {
+      console.log("ok");
+      let getMenu = document.getElementById("principal_menu");
+      if (getMenu.classList.contains("menu-hide") == true) {
+        getMenu.classList.add("menu-show");
+        getMenu.classList.remove("menu-hide");
+        return;
+      }
+      getMenu.classList.remove("menu-show");
+      getMenu.classList.add("menu-hide");
+    },
+    detectEvents() {
+      let getAllContentSection = document.querySelectorAll(
+        "#element_transition"
+      );
+
+      //let initCount = 0;
+      let checkScrollEvent = 0;
+      document.addEventListener("wheel", (e) => {
+        console.log(e);
+        console.log(checkScrollEvent);
+        pagination([2, 7, 12, 17, 21]);
+        function pagination(items) {
+          for (let index = 0; index < items.length; index++) {
+            const activeScroll = items[index];
+            if (checkScrollEvent == activeScroll) {
+              if (
+                getAllContentSection[index].classList.contains(
+                  "default-transition"
+                ) == true
+              ) {
+                //ACTUAL PAGE
+                getAllContentSection[index].classList.remove(
+                  "default-transition"
+                );
+                getAllContentSection[index].classList.add("change-content");
+                //NEW PAGE
+                getAllContentSection[index + 1].classList.add(
+                  "default-transition"
+                );
+                getAllContentSection[index + 1].classList.remove(
+                  "change-content"
+                );
+                return;
+              }
+
+              //DESACTIVE PAGE
+              getAllContentSection[index].classList.add("default-transition");
+              getAllContentSection[index].classList.remove("change-content");
+              //ACTIVE PAGE PAGE
+              getAllContentSection[index + 1].classList.remove(
+                "default-transition"
+              );
+              getAllContentSection[index + 1].classList.add("change-content");
+            }
           }
-        }, 200);
-      } else {
-        getContentItem.classList.remove("item-show");
-        getContentItem.classList.add("item-hide");
-        setTimeout(() => {
-          getContentItem.classList.add("hidden");
-        }, 1000);
-      }
+        }
+        if (Math.sign(e.deltaY) == 1) {
+          checkScrollEvent++;
+        }
+        if (Math.sign(e.deltaY) == -1) {
+          checkScrollEvent--;
+        }
+        return false;
+      });
     },
+  },
+  mounted() {
+    this.detectEvents();
+    this.jokeGenerator();
   },
 };
 </script>
@@ -735,6 +641,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 body::before {
   content: "";
@@ -751,27 +658,36 @@ body::before {
 .text-font-exo {
   font-family: "Exo", sans-serif;
 }
-.item-hide {
+.change-content {
+  transition: all 2s ease-in-out;
+  top: -1000px;
+}
+.default-transition {
+  transition: all 2s ease-in-out;
+  top: 0;
+}
+.my-projets-list {
+  top: -40px;
+}
+.my-certificates-list,
+.joke {
+  top: -50px;
+}
+.menu {
+  position: absolute;
+  top: 50px;
+  width: 20%;
+  height: 100vh;
+  background: #1f1f1f;
+  z-index: 15;
   transition: all ease-in-out 1s;
-  opacity: 0;
-  z-index: -3;
 }
-.item-show {
-  transition: all ease-in-out 1s;
-  opacity: 1;
-  z-index: 20;
+.menu-hide {
+  left: -700px;
 }
-iframe {
-  width: 100%;
-  height: 250px;
+.menu-show {
+  left: 0;
 }
-div.overflow-y-scroll::-webkit-scrollbar,
-div.overflow-y-scroll::-webkit-scrollbar {
-  width: 10px;
-  background: none;
-  height: 5px;
-}
-
 @media only screen and (max-width: 480px) and (min-width: 300px) {
   .links-mobile {
     grid: none !important;
@@ -883,19 +799,8 @@ div.overflow-y-scroll::-webkit-scrollbar {
 @media only screen and (max-width: 992px) and (min-width: 841px) {
 }
 @media only screen and (max-width: 1024px) and (min-width: 992px) {
-  h1 {
-    font-size: 32px !important;
-  }
-  #content_about .grid-rows {
-    height: 45em;
-  }
-  .technologies-fix {
-    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-columns: none !important;
-    justify-content: center;
-  }
-  .grid-rows-fixed {
-    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+  .my-projets-list {
+    top: -70px;
   }
 }
 @media only screen and (max-width: 1200px) and (min-width: 1025px) {
