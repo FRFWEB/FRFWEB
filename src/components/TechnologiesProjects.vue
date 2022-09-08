@@ -1,6 +1,9 @@
 <template>
-  <div class="mx-1">
-    <div v-if="downloadFile == 'true'" class="w-80 h-64 md:w-48 sm:!w-36">
+  <div class="mx-1 sm:basis-2/5">
+    <div
+      v-if="downloadFile == 'true'"
+      class="xl:w-60 h-64 lg:w-48 md:w-full sm:w-36"
+    >
       <div class="shadow-md shadow-slate-400 rounded-b w-full h-full relative">
         <img :src="imageUrl" :alt="nameProject" class="h-full w-full" />
         <div
@@ -15,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div v-else class="w-80 h-64 md:w-48 sm:!w-36">
+    <div v-else class="xl:w-60 h-64 lg:w-48 md:w-full sm:w-36">
       <div class="shadow-md shadow-slate-400 rounded-b w-full h-full relative">
         <img :src="imageUrl" :alt="nameProject" class="h-full w-full" />
         <div

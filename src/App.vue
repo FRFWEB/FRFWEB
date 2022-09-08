@@ -70,7 +70,7 @@
         <!-- CONTENT-1 -->
         <div class="relative default-transition" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center"
           >
             <div class="mb-3 text-title">
               <h1
@@ -96,7 +96,7 @@
         <!-- CONENT 2 -->
         <div class="relative change-content" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center"
           >
             <div class="mb-3 text-title">
               <h2
@@ -129,7 +129,7 @@
         <!-- CONENT 3 -->
         <div class="relative change-content" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center"
           >
             <div class="mb-3 text-title">
               <h2
@@ -138,100 +138,100 @@
                 THE TECHNOLOGIES, FRAMEWORKS AND CMS I CURRENTLY USE ARE THESE
               </h2>
             </div>
-            <div class="flex mt-4">
+            <div class="flex flex-row flex-wrap justify-center mt-4">
               <img
                 src="@/assets/img/html5.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 my-1 item-tech"
               />
               <img
                 src="@/assets/img/css3.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 my-1 item-tech"
               />
               <img
                 src="@/assets/img/javascript.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/sass.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/wordpress.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/sql.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
               />
             </div>
-            <div class="flex mt-4">
+            <div class="flex flex-row flex-wrap justify-center mt-4">
               <img
                 src="@/assets/img/electronjs.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/bootstrap.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/tailwind.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/jquery.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/webpack.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/mysql.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
             </div>
-            <div class="flex mt-4">
+            <div class="flex flex-row flex-wrap justify-center mt-4">
               <img
                 src="@/assets/img/node.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/express.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/mongodb.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/php.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/vuejs.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
               <img
                 src="@/assets/img/strapi.png"
                 alt="html5"
-                class="w-20 rounded-lg mx-2 item-tech"
+                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
               />
             </div>
             <div class="mt-8 text-title text-center">
@@ -245,10 +245,10 @@
         <!-- CONENT 4 -->
         <div class="relative change-content" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center my-projets-list"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center my-projets-list"
           >
             <div class="mb-3">
-              <div class="flex mt-2 justify-center">
+              <div class="flex flex-row flex-wrap mt-2 justify-center">
                 <TechnologiesProjects
                   :imageUrl="require('@/assets/capture/proyectoshappy.png')"
                   nameProject="Proyectos Happy 3000 C.A"
@@ -284,7 +284,8 @@
                   url="https://ht.fo/"
                   downloadFile="false"
                 />
-
+              </div>
+              <div class="justify-center flex flex-row flex-wrap mt-2">
                 <TechnologiesProjects
                   :imageUrl="require('@/assets/capture/zle.lc.png')"
                   nameProject="Zle.lc"
@@ -293,8 +294,7 @@
                   url="https://portafoliofrfweb.000webhostapp.com/downloads/zle.zip"
                   downloadFile="true"
                 />
-              </div>
-              <div class="flex mt-2">
+
                 <TechnologiesProjects
                   :imageUrl="require('@/assets/capture/dr.fo.png')"
                   nameProject="Dr.fo - Shrink Your Link"
@@ -302,15 +302,6 @@
                   technologies="NODEJS, EXPRESS, VUEJS, WIZZLE.CSS MONGODB"
                   url="https://dr.fo/"
                   downloadFile="false"
-                />
-
-                <TechnologiesProjects
-                  :imageUrl="require('@/assets/capture/americanstrongman.png')"
-                  nameProject="American Strong Man"
-                  description="Website of GYM and Fitness"
-                  technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
-                  url="https://portafoliofrfweb.000webhostapp.com/downloads/americanstrongman.zip"
-                  downloadFile="true"
                 />
 
                 <TechnologiesProjects
@@ -332,15 +323,6 @@
                   url="https://serviciostelefonica.com/"
                   downloadFile="false"
                   hiddenElement="true"
-                />
-
-                <TechnologiesProjects
-                  :imageUrl="require('@/assets/capture/cell.com.pl.png')"
-                  nameProject="Cell.com.pl"
-                  description="Website of sell electronics, mobile and others"
-                  technologies="VUEJS, HTML, CSS, JAVASCRIPT, WIZZLE CSS"
-                  url="https://portafoliofrfweb.000webhostapp.com/downloads/cell.zip"
-                  downloadFile="false"
                 />
               </div>
               <div class="text-center mt-4">
@@ -365,7 +347,7 @@
         <!-- CONTENT 5 -->
         <div class="relative change-content" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center my-certificates-list"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center my-certificates-list"
           >
             <div class="mb-3 text-title">
               <h2
@@ -374,7 +356,7 @@
                 MY LAST COURSES
               </h2>
             </div>
-            <div class="flex mt-2">
+            <div class="flex flex-row flex-wrap mt-2 justify-center">
               <CertificateComponent
                 :certificateImage="require('@/assets/capture/certificate1.jpg')"
                 name="certificate1"
@@ -392,7 +374,7 @@
                 name="certificate4"
               />
             </div>
-            <div class="flex">
+            <div class="flex flex-row flex-wrap justify-center">
               <CertificateComponent
                 :certificateImage="require('@/assets/capture/certificate5.jpg')"
                 name="certificate5"
@@ -432,7 +414,7 @@
         <!-- CONTENT-6 -->
         <div class="relative change-content" id="element_transition">
           <div
-            class="flex absolute flex-col left-0 h-screen w-full items-center justify-center joke"
+            class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center joke"
           >
             <div class="mb-3">
               <h2
@@ -559,7 +541,6 @@ export default {
       this.jokeGenerator();
     },
     open_panel() {
-      console.log("ok");
       let getMenu = document.getElementById("principal_menu");
       if (getMenu.classList.contains("menu-hide") == true) {
         getMenu.classList.add("menu-show");
@@ -574,7 +555,6 @@ export default {
         "#element_transition"
       );
 
-      //let initCount = 0;
       let checkScrollEvent = 0;
       document.addEventListener("wheel", (e) => {
         console.log(e);
@@ -624,9 +604,59 @@ export default {
         return false;
       });
     },
+    checkResolution() {
+      if (
+        window.matchMedia("(min-width: 300px)").matches &&
+        window.matchMedia("(max-width: 480px)").matches
+      ) {
+        console.log("Match 300px - 480px");
+      } else if (
+        window.matchMedia("(min-width: 481px)").matches &&
+        window.matchMedia("(max-width: 768px)").matches
+      ) {
+        console.log("Match 481px - 768px");
+      } else if (
+        window.matchMedia("(min-width: 769px)").matches &&
+        window.matchMedia("(max-width: 992px)").matches
+      ) {
+        console.log("Match 769px - 992px");
+      }
+      if (
+        window.matchMedia("(min-width: 992px)").matches &&
+        window.matchMedia("(max-width: 1024px)").matches
+      ) {
+        this.detectEvents();
+        return;
+      }
+      if (
+        window.matchMedia("(min-width: 1025px)").matches &&
+        window.matchMedia("(max-width: 1200px)").matches
+      ) {
+        this.detectEvents();
+        return;
+      }
+      if (
+        window.matchMedia("(min-width: 1201px)").matches &&
+        window.matchMedia("(max-width: 1279px)").matches
+      ) {
+        this.detectEvents();
+        return;
+      }
+      if (
+        window.matchMedia("(min-width: 1280px)").matches &&
+        window.matchMedia("(max-width: 1919px)").matches
+      ) {
+        this.detectEvents();
+        return;
+      }
+      if (window.matchMedia("(min-width: 1920px)").matches) {
+        this.detectEvents();
+        return;
+      }
+    },
   },
   mounted() {
-    this.detectEvents();
+    this.checkResolution();
     this.jokeGenerator();
   },
 };
@@ -683,117 +713,35 @@ body::before {
   transition: all ease-in-out 1s;
 }
 .menu-hide {
-  left: -700px;
+  left: -1000px;
 }
 .menu-show {
   left: 0;
 }
 @media only screen and (max-width: 480px) and (min-width: 300px) {
-  .links-mobile {
-    grid: none !important;
+  .element-change-responsive {
+    position: inherit !important;
+    height: auto !important;
   }
-  .links-mobile > div > .z-10 > .links-fix {
-    top: 94vh;
-    height: 60px;
+  body {
+    overflow: auto;
   }
-  .links-mobile > div > .z-10 > .links-fix > .flex {
-    flex-direction: row;
-    height: 100%;
-  }
-  .links-width-fix {
-    width: 100% !important;
-  }
-  .menu-mobile > .w-40 {
-    width: 100% !important;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex {
-    flex-direction: row;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex > .mt-6 {
-    margin-left: 15px;
-    margin-top: 15px;
-  }
-  .menu-mobile > .w-40 > .h-screen {
-    height: 80px;
-    bottom: -55px;
-  }
-  .menu-mobile > .w-40 > .h-screen > .h-screen,
-  .menu-mobile > .w-40 > .h-screen > .flex > .h-screen {
-    height: 100%;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex > .flex {
-    flex-direction: row;
-    margin-top: 15px;
-    justify-content: end;
-  }
-  .grid-rows-fixed {
-    grid-template-rows: repeat(18, minmax(0, 1fr)) !important;
-    grid-template-columns: none !important;
-  }
-  .technologies-fix {
-    grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
-    grid-template-columns: none !important;
-    justify-content: center;
-  }
-  #content_about .grid-rows {
-    grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
-    grid-template-columns: none !important;
-    height: 75em;
-  }
-  #content_certificates .grid,
-  #content_experience .grid {
-    grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
-    grid-template-columns: none !important;
+  .change-content {
+    top: 0;
   }
 }
 @media only screen and (max-width: 660px) and (min-width: 481px) {
 }
 @media only screen and (max-width: 840px) and (min-width: 661px) {
-  .links-mobile {
-    grid: none !important;
+  .element-change-responsive {
+    position: inherit !important;
+    height: auto !important;
   }
-  .links-mobile > div > .z-10 > .links-fix {
-    top: 94vh;
-    height: 60px;
+  body {
+    overflow: auto;
   }
-  .links-mobile > div > .z-10 > .links-fix > .flex {
-    flex-direction: row;
-    height: 100%;
-  }
-  .links-width-fix {
-    width: 100% !important;
-  }
-  .menu-mobile > .w-40 {
-    width: 100% !important;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex {
-    flex-direction: row;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex > .mt-6 {
-    margin-left: 15px;
-    margin-top: 15px;
-  }
-  .menu-mobile > .w-40 > .h-screen {
-    height: 80px;
-    bottom: -55px;
-  }
-  .menu-mobile > .w-40 > .h-screen > .h-screen,
-  .menu-mobile > .w-40 > .h-screen > .flex > .h-screen {
-    height: 100%;
-  }
-  .h-screen,
-  .menu-mobile > .w-40 > .h-screen > .flex > .h-screen {
-    justify-content: end;
-  }
-  .menu-mobile > .w-40 > .h-screen > .flex > .flex {
-    flex-direction: row;
-    margin-top: 15px;
-  }
-  .grid-rows-fixed {
-    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
-  }
-  h1 {
-    font-size: 20px !important;
+  .change-content {
+    top: 0;
   }
 }
 @media only screen and (max-width: 992px) and (min-width: 841px) {
