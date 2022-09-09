@@ -74,17 +74,17 @@
           >
             <div class="mb-3 text-title">
               <h1
-                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+                class="xl:text-5xl lg:text-4xl text-font-exo text-center sm:text-3xl translate"
               >
                 HI I'M FRANCISCO, FULL STACK WEB DEVELOPER
               </h1>
               <h2
-                class="text-center mt-4 lg:text-3xl text-font-exo sm:text-base translate"
+                class="text-center mt-4 lg:text-3xl text-font-exo sm:text-xl translate"
               >
                 WELCOME TO MY PORTAFOLIO
               </h2>
             </div>
-            <div class="mt-8 text-title text-center w-3/4">
+            <div class="mt-8 scroll-event text-center w-3/4">
               <p class="text-font-exo text-xl translate">
                 DO YOU WANT TO KNOW MORE ABOUT ME?, SCROLL AND YOU WILL SEE THE
                 MAGIC
@@ -100,7 +100,7 @@
           >
             <div class="mb-3 text-title">
               <h2
-                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
+                class="xl:text-5xl lg:text-4xl text-font-exo text-center sm:text-xl translate"
               >
                 ABOUT ME
               </h2>
@@ -117,7 +117,7 @@
                 AND PHP, CURRENTLY WORKING IN THE AREA SINCE 2016
               </p>
             </div>
-            <div class="mt-8 text-title text-center">
+            <div class="mt-8 scroll-event text-center">
               <p class="text-font-exo text-xl translate">
                 DO YOU WANT TO KNOW WHAT TECHNOLOGIES I CURRENTLY USE?, USE THE
                 SCROLL
@@ -133,108 +133,90 @@
           >
             <div class="mb-3 text-title">
               <h2
-                class="lg:text-5xl text-font-exo text-center sm:text-xl translate w-3/4 mx-auto"
+                class="xl:text-5xl lg:text-4xl text-font-exo text-center sm:text-xl translate w-3/4 mx-auto"
               >
                 THE TECHNOLOGIES, FRAMEWORKS AND CMS I CURRENTLY USE ARE THESE
               </h2>
             </div>
             <div class="flex flex-row flex-wrap justify-center mt-4">
-              <img
-                src="@/assets/img/html5.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 my-1 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/html5.png')"
+                altName="html5"
               />
-              <img
-                src="@/assets/img/css3.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 my-1 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/css3.png')"
+                altName="ccs3"
               />
-              <img
-                src="@/assets/img/javascript.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/javascript.png')"
+                altName="javascript"
               />
-              <img
-                src="@/assets/img/sass.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/sass.png')"
+                altName="sass"
               />
-              <img
-                src="@/assets/img/wordpress.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/wordpress.png')"
+                altName="wordpress"
               />
-              <img
-                src="@/assets/img/sql.png"
-                alt="html5"
-                class="w-20 rounded-lg mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/sql.png')"
+                altName="sql"
               />
             </div>
-            <div class="flex flex-row flex-wrap justify-center mt-4">
-              <img
-                src="@/assets/img/electronjs.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+            <div class="flex flex-row flex-wrap justify-center mt-1">
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/electronjs.png')"
+                altName="electronjs"
               />
-              <img
-                src="@/assets/img/bootstrap.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/bootstrap.png')"
+                altName="bootstrap"
               />
-              <img
-                src="@/assets/img/tailwind.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/tailwind.png')"
+                altName="tailwind"
               />
-              <img
-                src="@/assets/img/jquery.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/jquery.png')"
+                altName="jquery"
               />
-              <img
-                src="@/assets/img/webpack.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/webpack.png')"
+                altName="webpack"
               />
-              <img
-                src="@/assets/img/mysql.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/mysql.png')"
+                altName="mysql"
               />
             </div>
-            <div class="flex flex-row flex-wrap justify-center mt-4">
-              <img
-                src="@/assets/img/node.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+            <div class="flex flex-row flex-wrap justify-center mt-1">
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/node.png')"
+                altName="nodejs"
               />
-              <img
-                src="@/assets/img/express.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/express.png')"
+                altName="expressjs"
               />
-              <img
-                src="@/assets/img/mongodb.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/mongodb.png')"
+                altName="mongodb"
               />
-              <img
-                src="@/assets/img/php.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/php.png')"
+                altName="php"
               />
-              <img
-                src="@/assets/img/vuejs.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/vuejs.png')"
+                altName="vuejs"
               />
-              <img
-                src="@/assets/img/strapi.png"
-                alt="html5"
-                class="w-20 rounded-lg md:mx-2 sm:m-2 item-tech"
+              <TechnologiesImages
+                :imageUrl="require('@/assets/img/strapi.png')"
+                altName="strapi"
               />
             </div>
-            <div class="mt-8 text-title text-center">
+            <div class="mt-8 scroll-event text-center">
               <p class="text-font-exo text-xl translate">
                 WHAT PROJECTS HAVE YOU DONE?, USE THE SCROLL
               </p>
@@ -336,7 +318,7 @@
                 </a>
               </div>
             </div>
-            <div class="mt-3 text-title text-center">
+            <div class="mt-3 scroll-event text-center">
               <p class="text-font-exo text-xl translate">
                 SCROLL AND YOU WILL SEE MY CURRENTLY TAKEN COURSES
               </p>
@@ -403,7 +385,7 @@
               </a>
             </div>
 
-            <div class="mt-5 text-title text-center">
+            <div class="mt-5 scroll-event text-center">
               <p class="text-font-exo text-xl translate">
                 THIS IS ALL, BUT IF YOU SCROLL YOU WILL HAVE A SURPRISE
               </p>
@@ -491,11 +473,13 @@
 import { english, spanish } from "./traslate";
 import TechnologiesProjects from "./components/TechnologiesProjects.vue";
 import CertificateComponent from "./components/CertificateComponent.vue";
+import TechnologiesImages from "./components/TechnologiesImages.vue";
 export default {
   name: "App",
   components: {
     TechnologiesProjects,
     CertificateComponent,
+    TechnologiesImages,
   },
   data() {
     return {
@@ -718,6 +702,9 @@ body::before {
 .menu-show {
   left: 0;
 }
+.item-tech {
+  height: 80px;
+}
 @media only screen and (max-width: 480px) and (min-width: 300px) {
   .element-change-responsive {
     position: inherit !important;
@@ -728,6 +715,30 @@ body::before {
   }
   .change-content {
     top: 0;
+  }
+  main div.grid #element_transition:nth-child(1),
+  main div.grid #element_transition:nth-child(2),
+  main div.grid #element_transition:nth-child(5),
+  main div.grid #element_transition:nth-child(6) {
+    top: 100%;
+  }
+  main div.grid #element_transition:nth-child(4) {
+    top: 50%;
+  }
+  main div.grid #element_transition:nth-child(3) {
+    top: 85%;
+  }
+  main div.grid #element_transition:nth-child(5) {
+    top: 52%;
+  }
+  main div.grid #element_transition:nth-child(6) {
+    margin-top: 240px;
+  }
+  main div.grid #element_transition:nth-child(6) .joke {
+    margin-bottom: 60px;
+  }
+  .scroll-event {
+    visibility: hidden;
   }
 }
 @media only screen and (max-width: 660px) and (min-width: 481px) {
@@ -743,6 +754,33 @@ body::before {
   .change-content {
     top: 0;
   }
+  main div.grid #element_transition:nth-child(1),
+  main div.grid #element_transition:nth-child(2),
+  main div.grid #element_transition:nth-child(5),
+  main div.grid #element_transition:nth-child(6) {
+    top: 100%;
+  }
+  main div.grid #element_transition:nth-child(4) {
+    top: 43%;
+  }
+  main div.grid #element_transition:nth-child(3) {
+    top: 85%;
+  }
+  main div.grid #element_transition:nth-child(5) {
+    top: 52%;
+  }
+  main div.grid #element_transition:nth-child(6) {
+    margin-top: 200px;
+  }
+  main div.grid #element_transition:nth-child(6) .joke {
+    margin-bottom: 80px;
+  }
+  .my-certificates-list {
+    top: -200px;
+  }
+  .scroll-event {
+    visibility: hidden;
+  }
 }
 @media only screen and (max-width: 992px) and (min-width: 841px) {
 }
@@ -756,7 +794,16 @@ body::before {
 @media only screen and (max-width: 1279px) and (min-width: 1201px) {
 }
 @media only screen and (max-width: 1919px) and (min-width: 1280px) {
+  .my-projets-list {
+    top: -100px;
+  }
+  .my-certificates-list {
+    top: -70px;
+  }
 }
 @media only screen and (min-width: 1920px) {
+  .change-content {
+    top: -1500px;
+  }
 }
 </style>
