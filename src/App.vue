@@ -802,7 +802,7 @@ body::before {
     visibility: hidden;
   }
   .my-projets-list h2 {
-    visibility: hidden;
+    visibility: visible;
   }
   .item-tech {
     height: 80px;
