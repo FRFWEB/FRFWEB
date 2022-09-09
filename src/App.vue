@@ -230,6 +230,11 @@
             class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center my-projets-list"
           >
             <div class="mb-3">
+              <h2
+                class="xl:text-5xl translate lg:text-4xl text-font-exo text-center sm:text-xl translate w-3/4 mx-auto"
+              >
+                MY PROJECTS
+              </h2>
               <div class="flex flex-row flex-wrap mt-2 justify-center">
                 <TechnologiesProjects
                   :imageUrl="require('@/assets/capture/proyectoshappy.png')"
@@ -703,7 +708,10 @@ body::before {
   left: 0;
 }
 .item-tech {
-  height: 80px;
+  height: 50px;
+}
+.my-projets-list h2 {
+  visibility: hidden;
 }
 @media only screen and (max-width: 480px) and (min-width: 300px) {
   .element-change-responsive {
@@ -741,6 +749,16 @@ body::before {
   }
   .scroll-event {
     visibility: hidden;
+  }
+  .menu {
+    width: 40%;
+    top: 65px;
+  }
+  .my-projets-list h2 {
+    visibility: visible;
+  }
+  .item-tech {
+    height: 80px;
   }
 }
 @media only screen and (max-width: 660px) and (min-width: 481px) {
@@ -783,6 +801,12 @@ body::before {
   .scroll-event {
     visibility: hidden;
   }
+  .my-projets-list h2 {
+    visibility: hidden;
+  }
+  .item-tech {
+    height: 80px;
+  }
 }
 @media only screen and (max-width: 992px) and (min-width: 841px) {
 }
@@ -802,10 +826,16 @@ body::before {
   .my-certificates-list {
     top: -70px;
   }
+  .item-tech {
+    height: 80px;
+  }
 }
 @media only screen and (min-width: 1920px) {
   .change-content {
     top: -1500px;
+  }
+  .item-tech {
+    height: 80px;
   }
 }
 </style>

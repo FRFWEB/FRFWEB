@@ -4,7 +4,7 @@
       <img
         :src="imageUrl"
         :alt="altName"
-        class="xl:w-20 lg:h-auto lg:w-12 rounded-lg mx-2 my-1 item-tech"
+        class="xl:w-20 lg:w-12 rounded-lg mx-2 my-1 item-tech"
       />
     </div>
   </div>
