@@ -716,24 +716,26 @@ body::before {
   .change-content {
     top: 0;
   }
-  main div.grid #element_transition:nth-child(1),
-  main div.grid #element_transition:nth-child(2),
-  main div.grid #element_transition:nth-child(5),
-  main div.grid #element_transition:nth-child(6) {
+  main div.grid #element_transition:nth-child(1) {
+    top: 140%;
+  }
+  main div.grid #element_transition:nth-child(2) {
     top: 100%;
   }
-  main div.grid #element_transition:nth-child(4) {
-    top: 50%;
-  }
   main div.grid #element_transition:nth-child(3) {
-    top: 85%;
+    top: 70%;
+  }
+  main div.grid #element_transition:nth-child(4) {
+    top: 30%;
   }
   main div.grid #element_transition:nth-child(5) {
-    top: 52%;
+    top: 30%;
   }
   main div.grid #element_transition:nth-child(6) {
-    margin-top: 240px;
+    top: 100%;
+    margin-top: 200px;
   }
+
   main div.grid #element_transition:nth-child(6) .joke {
     margin-bottom: 60px;
   }
