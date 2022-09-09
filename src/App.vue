@@ -725,7 +725,7 @@ body::before {
     top: 0;
   }
   main div.grid #element_transition:nth-child(1) {
-    top: 140%;
+    top: 135%;
   }
   main div.grid #element_transition:nth-child(2) {
     top: 100%;
