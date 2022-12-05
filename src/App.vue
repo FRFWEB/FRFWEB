@@ -546,8 +546,6 @@ export default {
 
       let checkScrollEvent = 0;
       document.addEventListener("wheel", (e) => {
-        console.log(e);
-        console.log(checkScrollEvent);
         pagination([2, 7, 12, 17, 21]);
         function pagination(items) {
           for (let index = 0; index < items.length; index++) {
