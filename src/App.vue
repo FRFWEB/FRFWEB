@@ -458,7 +458,7 @@
                   </a>
                 </div>
                 <div class="m-3 networks-links">
-                  <a href="https://github.com/teikblade" target="_blank">
+                  <a href="https://github.com/frfweb" target="_blank">
                     <i
                       class="fa fa-github-square hover:text-blue-400"
                       aria-hidden="true"
