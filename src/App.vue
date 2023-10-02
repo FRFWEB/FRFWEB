@@ -14,29 +14,29 @@
                 </div>
                 <!-- MENU -->
                 <div
-                  class="menu menu-hide shadow shadow-slate-300 sm:w-4/12"
+                  class="menu menu-hide shadow mt-4 shadow-slate-300 sm:w-4/12 md:w-3/12 lg:w-3/12 xl:w-1/5 2xl:w-1/5"
                   id="principal_menu"
                 >
-                  <div class="mt-4">
+                  <div class="">
                     <a
                       target="_blank"
                       href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaSpanish.pdf"
-                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      class="block pl-4 py-2 border-b-2 border-white hover:text-black hover:bg-white"
                       >CV SPANISH</a
                     >
                   </div>
-                  <div class="mt-2">
+                  <div class="">
                     <a
                       target="_blank"
                       href="https://portafoliofrfweb.000webhostapp.com/cv/cvFranciscoGarciaEnglish.pdf"
-                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      class="block pl-4 py-2 border-b-2 border-white hover:text-black hover:bg-white"
                       >CV ENGLISH</a
                     >
                   </div>
-                  <div class="mt-2">
+                  <div class="">
                     <a
                       href="mailto:francisco_glopez@hotmail.com"
-                      class="block p-2 border-2 border-white hover:text-black hover:bg-white"
+                      class="block pl-4 py-2 border-b-2 border-white hover:text-black hover:bg-white"
                       >Contact Me</a
                     >
                   </div>
@@ -403,18 +403,10 @@
           <div
             class="flex absolute element-change-responsive flex-col left-0 h-screen w-full items-center justify-center joke"
           >
-            <div class="mb-3">
-              <h2
-                class="lg:text-5xl text-font-exo text-center sm:text-xl translate"
-              >
-                JOKE
-              </h2>
-            </div>
-            <div class="w-3/4">
-              <p class="text-font-exo text-xl text-center">{{ jokeMessage }}</p>
-            </div>
             <div class="mt-4">
-              <p class="text-font-exo text-xl translate text-center">
+              <p
+                class="lg:text-5xl text-font-exo sm:text-xl translate text-center"
+              >
                 HAPPY DAY :)
               </p>
             </div>
@@ -442,7 +434,7 @@
                   </a>
                 </div>
                 <div class="m-3 networks-links">
-                  <a href="https://www.linkedin.com/in/frfweb/" target="_blank">
+                  <a href="#" target="_blank">
                     <i
                       class="fa fa-linkedin-square hover:text-blue-400"
                       aria-hidden="true"
@@ -494,7 +486,7 @@ export default {
   },
   methods: {
     async jokeGenerator() {
-      this.jokeMessage = "";
+      /* this.jokeMessage = "";
       if (this.languageDefault == "es") {
         let response = await fetch(
           "https://palabras-aleatorias-public-api.herokuapp.com/joke/random"
@@ -508,7 +500,7 @@ export default {
       }
       let response = await fetch("https://api.chucknorris.io/jokes/random");
       let data = await response.json();
-      this.jokeMessage = data.value;
+      this.jokeMessage = data.value; */
     },
     translateContent(language) {
       let getAllElementForTranslate = document.querySelectorAll(".translate");
@@ -519,7 +511,7 @@ export default {
         getAllElementForTranslate.forEach((itemText, index) => {
           itemText.innerHTML = objTranslate[index];
         });
-        this.jokeGenerator();
+        //this.jokeGenerator();
         return;
       }
       let objTranslate = english();
@@ -527,7 +519,7 @@ export default {
       getAllElementForTranslate.forEach((itemText, index) => {
         itemText.innerHTML = objTranslate[index];
       });
-      this.jokeGenerator();
+      //this.jokeGenerator();
     },
     open_panel() {
       let getMenu = document.getElementById("principal_menu");
@@ -644,7 +636,7 @@ export default {
   },
   mounted() {
     this.checkResolution();
-    this.jokeGenerator();
+    //this.jokeGenerator();
   },
 };
 </script>

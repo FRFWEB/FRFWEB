@@ -14,7 +14,6 @@ function english() {
     "MY LAST COURSES",
     "DOWNLOAD ALL CERTIFICATES",
     "THIS IS ALL, BUT IF YOU SCROLL YOU WILL HAVE A SURPRISE",
-    "JOKE",
     "HAPPY DAY :)",
   ];
   return content;
@@ -36,7 +35,6 @@ function spanish() {
     "MIS ULTIMOS CURSOS",
     "DESCARGAR TODOS LOS CERTIFICADOS",
     "ESTO ES TODO, PERO SI DESPLAZAS TE LLEVARAS UNA SORPRESA",
-    "BROMA",
     "FELIZ DIA :)",
   ];
   return content;
