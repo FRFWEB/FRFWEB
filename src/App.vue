@@ -144,10 +144,10 @@ onMounted(() => {
 </template>
 
 <script>
-import VideoEditorComponent from "./components/VideoEditorComponent.vue";
-import FooterComponent from "./components/FooterComponent.vue";
-import CharactersComponent from "./components/CharactersComponent.vue";
-import WebDeveloperComponent from "./components/WebDeveloperComponent.vue";
+import VideoEditorComponent from "@/components/VideoEditorComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import CharactersComponent from "@/components/CharactersComponent.vue";
+import WebDeveloperComponent from "@/components/WebDeveloperComponent.vue";
 
 export default {
   name: "App",
