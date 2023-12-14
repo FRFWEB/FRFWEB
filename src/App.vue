@@ -110,7 +110,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="flex container-characters flex-row">
-        <CharactersComponent
+        <Characters
           title="Web Developer"
           image="developer.webp"
           buttonValue="webDeveloper"
@@ -118,7 +118,7 @@ onMounted(() => {
           @valueScena="changeScene"
         />
 
-        <CharactersComponent
+        <Characters
           title="Video Editor"
           image="editor.webp"
           buttonValue="videoEditor"
@@ -130,32 +130,32 @@ onMounted(() => {
 
     <!-- WEB DEVELOPER -->
     <div class="content hidden">
-      <WebDeveloperComponent @valueScena="changeScene" />
+      <Developer @valueScena="changeScene" />
     </div>
 
     <!-- VIDEO EDITOR -->
     <div class="content hidden">
-      <VideoEditorComponent @valueScena="changeScene" />
+      <VideoEditor @valueScena="changeScene" />
     </div>
 
     <!-- FOOTER -->
-    <FooterComponent title="created by @frfcode" />
+    <Footer title="created by @frfcode" />
   </div>
 </template>
 
 <script>
-import VideoEditorComponent from "@/components/VideoEditorComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import CharactersComponent from "@/components/CharactersComponent.vue";
-import WebDeveloperComponent from "@/components/WebDeveloperComponent.vue";
+import VideoEditor from "@/components/VideoEditorComponent.vue";
+import Footer from "@/components/FooterComponent.vue";
+import Characters from "@/components/CharactersComponent.vue";
+import Developer from "@/components/WebDeveloperComponent.vue";
 
 export default {
   name: "App",
   components: {
-    VideoEditorComponent,
-    FooterComponent,
-    CharactersComponent,
-    WebDeveloperComponent,
+    Footer,
+    VideoEditor,
+    Characters,
+    Developer,
   },
 };
 </script>
