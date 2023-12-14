@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&family=Silkscreen&display=swap");
+
+.text-silkscreen {
+  font-family: "Silkscreen", sans-serif;
+}
+
+.text-russo-one {
+  font-family: "Russo One", sans-serif;
+}
+
+.text-press-start-2p {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.circle {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  top: 0;
+  bottom: 0;
+  margin-top: 25%;
+  left: 49%;
+  background: #000;
+  border-radius: 100%;
+  animation: changePage 5s ease-in-out 1;
+}
+
+@keyframes changePage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(100);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content {
+  opacity: 0;
+  transition: all ease-in-out 0.8s;
+}
+
+.active-scene {
+  opacity: 1;
+  transition: all ease-in-out 3s;
+}
+
+.animate-content {
+  opacity: 0;
+  transition: all ease-in-out 3s;
+}
+
+.skill-animation {
+  animation: skill 2.5s ease-in-out 5s 1 normal;
+}
+
+@keyframes skill {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 640px) {
+  .container-characters,
+  .presentation--buttons,
+  .presentation {
+    flex-wrap: wrap;
+  }
+}
