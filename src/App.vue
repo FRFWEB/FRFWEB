@@ -14,7 +14,7 @@ const animationScene = (firstElement, secondElement) => {
     setTimeout(() => {
       secondElement.classList.add("active-scene");
     }, 80);
-  }, 2500);
+  }, 1900);
 };
 
 const animationLoading = () => {
