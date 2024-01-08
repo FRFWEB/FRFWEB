@@ -135,6 +135,35 @@ export default {
       arquitecturesDeveloper: ["mevn", "bem", "mobile_first", "pwa"],
       projectsDeveloper: [
         {
+          name: "plomeros911",
+          project_url: "#",
+          description:
+            "I built an informative website to offer plumbing services, it also has a section for recruiting personnel and a contact area, the UI was created using figma and is under the concept of SPA using vuejs + bootstrap and email management with emailjs.",
+          project_video: "https://screenpal.com/watch/cZVjbfVH7bW",
+          skills: "html, css, javascript, vue, emailjs, bootstrap.",
+          image: "plomeros911.png",
+        },
+        {
+          name: "fonseplus",
+          project_url: "#",
+          description:
+            "I built the service platform using Laravel + Adminlte 3 + Sweetalert2 + jquery + Bootstrap + Select2. This system seeks to offer sales of independent accounts, packs or a complete account of the streaming service.",
+          project_video: "https://screenpal.com/watch/cZVjbcVH7bh",
+          skills:
+            "html, css, javascript, laravel, jquery, adminlte, php, pusher, laravel-mail, bootstrap, sweetalert.",
+          image: "fonseplus.png",
+        },
+        {
+          name: "sdprimetv",
+          project_url: "#",
+          description:
+            "I made a web application + PWA with Laravel that would allow product inventory control, customer management, invoice generator and content management.",
+          project_video: "https://screenpal.com/watch/c0l6eXVmGnh",
+          skills:
+            "html, css, javascript, laravel, jquery, adminlte, php, pusher, laravel-mail, tailwind, bootstrap, sweetalert, pwa.",
+          image: "sdpriemtv.png",
+        },
+        {
           name: "wizzle.work",
           project_url: "#",
           description:
@@ -179,16 +208,6 @@ export default {
           project_video: "https://screenpal.com/watch/c0l6eZVmGn7",
           skills: "wordpress",
           image: "proyectos_happy_3000.png",
-        },
-        {
-          name: "sdprimetv",
-          project_url: "#",
-          description:
-            "I made a web application + PWA with Laravel that would allow product inventory control, customer management, invoice generator and content management.",
-          project_video: "https://screenpal.com/watch/c0l6eXVmGnh",
-          skills:
-            "html, css, javascript, laravel, jquery, adminlte, php, pusher, laravel-mail, tailwind, bootstrap, pwa.",
-          image: "sdpriemtv.png",
         },
         {
           name: "eselvehiculo",

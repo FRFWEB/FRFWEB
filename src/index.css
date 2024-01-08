@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
   left: 49%;
   background: #000;
   border-radius: 100%;
-  animation: changePage 5s ease-in-out 1;
+  animation: changePage 2.5s ease-in-out 1;
 }
 
 @keyframes changePage {

@@ -14,7 +14,7 @@ const animationScene = (firstElement, secondElement) => {
     setTimeout(() => {
       secondElement.classList.add("active-scene");
     }, 80);
-  }, 5000);
+  }, 2500);
 };
 
 const animationLoading = () => {
@@ -28,7 +28,7 @@ const animationLoading = () => {
   document.querySelector("#app").appendChild(createDiv);
   setTimeout(() => {
     createDiv.remove();
-  }, 5100);
+  }, 2500);
 };
 
 const changeScene = (value) => {
