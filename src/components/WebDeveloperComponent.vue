@@ -17,6 +17,7 @@ const getScenaValue = (e) => {
       :image="developer.image"
       :first_link="developer.first_link"
       :second_link="developer.second_link"
+      :third_link="developer.third_link"
     />
 
     <!-- SKILLS -->
@@ -89,14 +90,19 @@ export default {
           "I am a person dedicated and passionate about what I do, I like challenges and good teams, likewise I do not limit my learning and I adapt to any ecosystem",
         image: "developer.webp",
         first_link: {
-          name: "Check folder",
+          name: "Github",
           icon: "fab fa-github",
           url: "https://github.com/frfcode",
         },
         second_link: {
-          name: "Check my resume",
-          icon: "fas fa-file ",
+          name: "Linkedin",
+          icon: "fab fa-linkedin-in",
           url: "https://www.linkedin.com/in/frfcode/",
+        },
+        third_link: {
+          name: "Resume",
+          icon: "fas fa-file",
+          url: "/cv/cvFranciscoGarcia.pdf",
         },
       },
       skillsDeveloper: [
@@ -134,6 +140,15 @@ export default {
       ],
       arquitecturesDeveloper: ["mevn", "bem", "mobile_first", "pwa"],
       projectsDeveloper: [
+        {
+          name: "plomerosatualcance",
+          project_url: "#",
+          description:
+            "I built an informative website to offer plumbing services, it also has a section for recruiting personnel and a contact area, the UI was created using figma and is under the concept of SPA using vuejs + bootstrap and email management with emailjs.",
+          project_video: "https://screenpal.com/watch/cZVoDEVJQPs",
+          skills: "html, css, javascript, vue, emailjs, bootstrap.",
+          image: "plomerosatualcance.png",
+        },
         {
           name: "plomeros911",
           project_url: "#",

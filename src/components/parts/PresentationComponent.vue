@@ -7,6 +7,7 @@ const props = defineProps({
   image: String,
   first_link: Object,
   second_link: Object,
+  third_link: Object,
 });
 </script>
 <template>
@@ -37,6 +38,7 @@ const props = defineProps({
       <div class="flex flex-row gap-4 mt-4 presentation--buttons">
         <div
           class="2xl:basis-5/12 xl:basis-5/12 lg:basis-5/12 md:basis-full sm:basis-full xs:basis-full"
+          v-if="props.second_link.name != ''"
         >
           <a
             :href="props.first_link.url"
@@ -48,6 +50,7 @@ const props = defineProps({
         </div>
         <div
           class="2xl:basis-5/12 xl:basis-5/12 lg:basis-5/12 md:basis-full sm:basis-full xs:basis-full"
+          v-if="props.second_link.name != ''"
         >
           <a
             target="_blank"
@@ -55,6 +58,18 @@ const props = defineProps({
             class="text-silkscreen bg-black text-base text-white hover:bg-neutral-800 w-full py-2 block text-center"
           >
             <i :class="props.second_link.icon"></i> {{ props.second_link.name }}
+          </a>
+        </div>
+        <div
+          class="2xl:basis-5/12 xl:basis-5/12 lg:basis-5/12 md:basis-full sm:basis-full xs:basis-full"
+          v-if="props.second_link.name != ''"
+        >
+          <a
+            target="_blank"
+            :href="props.third_link.url"
+            class="text-silkscreen bg-black text-base text-white hover:bg-neutral-800 w-full py-2 block text-center"
+          >
+            <i :class="props.third_link.icon"></i> {{ props.third_link.name }}
           </a>
         </div>
       </div>

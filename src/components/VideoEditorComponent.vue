@@ -17,6 +17,7 @@ const getScenaValue = (e) => {
       :image="videEditor.image"
       :first_link="videEditor.first_link"
       :second_link="videEditor.second_link"
+      :third_link="videEditor.third_link"
     />
 
     <!-- SKILLS -->
@@ -75,13 +76,18 @@ export default {
           "I am a dedicated and detailed person when editing, I like to be creative and try new editing techniques, I do not limit myself to learning new tools and editing management.",
         image: "editor.webp",
         first_link: {
-          name: "Check my folder",
+          name: "",
           icon: "fas fa-play-circle",
           url: "#",
         },
         second_link: {
-          name: "Check my resume",
-          icon: "fas fa-file ",
+          name: "",
+          icon: "fab fa-linkedin-in",
+          url: "#",
+        },
+        third_link: {
+          name: "",
+          icon: "fas fa-file",
           url: "#",
         },
       },
